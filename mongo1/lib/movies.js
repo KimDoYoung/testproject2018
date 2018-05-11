@@ -8,7 +8,7 @@ function getQuery(name){
     return query;
 }
 function getPromise(name){
-    var condition = name ? {title1:name} : {};
+    var condition = name ? {'title1':name} : {};
     var promise = Movie.find(condition).exec();
     return promise;
 }
