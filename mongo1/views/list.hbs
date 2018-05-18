@@ -1,0 +1,29 @@
+<h1>{{title}}</h1>
+<form action="/movie/list" method="get">
+    <input type="hidden" name="pageNum" value="1"/>
+    <input type="hidden" name="pageSize" value="10"/>
+    <input type="text" name="key"/>
+    <input type="submit" value="검색" />
+</form>
+
+<table>
+    <tr>
+        <th>제목</th>
+        <th>년도</th>
+        <th>감독</th>
+        <th>DVD번호</th>
+    </tr>
+    {{#each list}}
+    <tr>
+        <td>
+            {{title1}}
+            {{#if title2}}
+                ({{title2}})
+            {{/if}}
+        </td>
+        <td>{{make_year}}</td>
+        <td>{{gamdok}}</td>
+        <td>{{dvd_id}}</td>
+    </tr>
+    {{/each}}
+</table>
